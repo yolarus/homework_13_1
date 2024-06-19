@@ -4,25 +4,25 @@ def mask_account_card(card_or_account: str) -> str:
     """
     list_card_or_account: list = card_or_account.split()
 
-    #Обработка карты
+    # Обработка карты
     if list_card_or_account[0] in ["Visa", "MasterCard", "Maestro"]:
-        #Шифруем номер карты
+        # Шифруем номер карты
         list_card_or_account[-1] = f"{list_card_or_account[-1][:6]}******{list_card_or_account[-1][-4:]}"
 
-        #Оборачиваем номер карты в список для перебора и вставки пробелов
+        # Оборачиваем номер карты в список для перебора и вставки пробелов
         list_number_card_account = list(list_card_or_account[-1])
         counter = 0
         for index in range(1, len(list_number_card_account)):
             if index % 4 == 0:
                 list_number_card_account.insert(index + counter, " ")
                 counter += 1
-        #Заменяем исходную строку с номером карты на зашифрованную с пробелами
+        # Заменяем исходную строку с номером карты на зашифрованную с пробелами
         else:
             list_card_or_account[-1] = "".join(list_number_card_account)
-    #Обработка счета
+    # Обработка счета
     elif list_card_or_account[0] == "Счет":
         list_card_or_account[-1] = f"**{list_card_or_account[-1][-2:]}"
-    #Прочие случаи
+    # Прочие случаи
     else:
         return "Не верно введенный номер счета или карты"
     return " ".join(list_card_or_account)
