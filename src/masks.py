@@ -1,40 +1,39 @@
-def mask_account_card(card_or_account: str) -> str:
+def get_mask_card_number(card_info: list) -> str:
     """
-    Функция принимает на вход информацию о карте или счете и возвращает зашифрованную информацию
+    Функция принимает на вход информацию о карте и возвращает зашифрованную информацию
     """
-    list_card_or_account: list = card_or_account.split()
+    # Шифруем номер карты
+    card_info[-1] = f"{card_info[-1][:6]}******{card_info[-1][-4:]}"
 
-    # Обработка карты
-    if list_card_or_account[0] in ["Visa", "MasterCard", "Maestro"]:
-        # Шифруем номер карты
-        list_card_or_account[-1] = f"{list_card_or_account[-1][:6]}******{list_card_or_account[-1][-4:]}"
-
-        # Оборачиваем номер карты в список для перебора и вставки пробелов
-        list_number_card_account = list(list_card_or_account[-1])
-        counter = 0
-        for index in range(1, len(list_number_card_account)):
-            if index % 4 == 0:
-                list_number_card_account.insert(index + counter, " ")
-                counter += 1
-        # Заменяем исходную строку с номером карты на зашифрованную с пробелами
-        else:
-            list_card_or_account[-1] = "".join(list_number_card_account)
-    # Обработка счета
-    elif list_card_or_account[0] == "Счет":
-        list_card_or_account[-1] = f"**{list_card_or_account[-1][-2:]}"
-    # Прочие случаи
+    # Оборачиваем номер карты в список для перебора и вставки пробелов
+    list_card_number = list(card_info[-1])
+    counter = 0
+    for index in range(1, len(list_card_number)):
+        if index % 4 == 0:
+            list_card_number.insert(index + counter, " ")
+            counter += 1
+    # Заменяем исходную строку с номером карты на зашифрованную с пробелами
     else:
-        return "Не верно введенный номер счета или карты"
-    return " ".join(list_card_or_account)
+        card_info[-1] = "".join(list_card_number)
+
+    return " ".join(card_info)
+
+
+def get_mask_account(account: list) -> str:
+    """
+    Функция принимает на вход информацию о счете и возвращает зашифрованную информацию
+    """
+    account[-1] = f"**{account[-1][-2:]}"
+
+    return " ".join(account)
 
 
 if __name__ == "__main__":
-    print(mask_account_card("Maestro 1596837868705199"))
-    print(mask_account_card("Счет 64686473678894779589"))
-    print(mask_account_card("MasterCard 7158300734726758"))
-    print(mask_account_card("Счет 35383033474447895560"))
-    print(mask_account_card("Visa Classic 6831982476737658"))
-    print(mask_account_card("Visa Platinum 8990922113665229"))
-    print(mask_account_card("Visa Gold 5999414228426353"))
-    print(mask_account_card("Счет 73654108430135874305"))
-    print(mask_account_card("Карта"))
+    print(get_mask_card_number("Maestro 1596837868705199".split()))
+    print(get_mask_account("Счет 64686473678894779589".split()))
+    print(get_mask_card_number("MasterCard 7158300734726758".split()))
+    print(get_mask_account("Счет 35383033474447895560".split()))
+    print(get_mask_card_number("Visa Classic 6831982476737658".split()))
+    print(get_mask_card_number("Visa Platinum 8990922113665229".split()))
+    print(get_mask_card_number("Visa Gold 5999414228426353".split()))
+    print(get_mask_account("Счет 73654108430135874305".split()))
