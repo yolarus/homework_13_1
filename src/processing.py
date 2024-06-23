@@ -14,6 +14,14 @@ def filter_by_state(id_info: List[dict], state: str = "EXECUTED") -> List[dict]:
     return filter_id_info
 
 
+def sort_by_date(id_info: List[dict], ascending: bool = False) -> List[dict]:
+    """
+    Функция сортирует переданные словари по дате. По умолчанию сортировка ведется по возрастанию
+    """
+    sorted_id_info = sorted(id_info, key=lambda el: el["date"], reverse=ascending)
+    return sorted_id_info
+
+
 if __name__ == "__main__":
     tests_info = [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'},
                   {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'},
@@ -22,3 +30,6 @@ if __name__ == "__main__":
 
     print(filter_by_state(tests_info))
     print(filter_by_state(tests_info, "CANCELED"))
+
+    print(sort_by_date(tests_info))
+    print(sort_by_date(tests_info, True))
