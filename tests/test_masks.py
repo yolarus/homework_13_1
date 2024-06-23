@@ -24,7 +24,5 @@ def test_get_mask_card_number(card_info, expected):
     assert get_mask_card_number(card_info) == expected
 
 
-@pytest.mark.parametrize("account, expected", [("Счет 64686473678894779589".split(), "Счет **89"),
-                                                 ("Счет 35383033474447895560".split(), "Счет **60")])
-def test_get_mask_account(account, expected):
-    assert get_mask_account(account) == expected
+def test_get_mask_account(account, masked_account):
+    assert get_mask_account(account.split()) == masked_account
