@@ -14,11 +14,11 @@ def filter_by_state(id_info: List[dict], state: str = "EXECUTED") -> List[dict]:
     return filter_id_info
 
 
-def sort_by_date(id_info: List[dict], ascending: bool = False) -> List[dict]:
+def sort_by_date(id_info: List[dict], ascending: bool = True) -> List[dict]:
     """
     Функция сортирует переданные словари по дате. По умолчанию сортировка ведется по возрастанию
     """
-    sorted_id_info = sorted(id_info, key=lambda el: el["date"], reverse=ascending)
+    sorted_id_info = sorted(id_info, key=lambda element: element["date"], reverse=ascending)
     return sorted_id_info
 
 
