@@ -1,4 +1,4 @@
-import src.masks
+from masks import get_mask_account, get_mask_card_number
 
 
 def get_data(user_date_time: str) -> str:
@@ -19,10 +19,10 @@ def mask_account_card(card_or_account: str) -> str:
 
     # Обработка карты
     if list_card_or_account[0] in ["Visa", "MasterCard", "Maestro"]:
-        return src.masks.get_mask_card_number(list_card_or_account)
+        return get_mask_card_number(list_card_or_account)
     # Обработка счета
     elif list_card_or_account[0] == "Счет":
-        return src.masks.get_mask_account(list_card_or_account)
+        return get_mask_account(list_card_or_account)
     # Прочие случаи
     else:
         return "Не верно введенный номер счета или карты"
