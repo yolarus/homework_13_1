@@ -1,5 +1,5 @@
-from processing import filter_by_state, sort_by_date
-from widget import mask_account_card, get_data
+from src.processing import filter_by_state, sort_by_date
+from src.widget import mask_account_card, get_data
 
 if __name__ == "__main__":
     print(mask_account_card("Maestro 1596837868705199"))
