@@ -42,6 +42,7 @@ def card_number_generator(start: int, stop: int) -> Generator:
         yield "".join(list_num)
 
 
+"""
 if __name__ == "__main__":
     transactions = [
         {
@@ -120,14 +121,12 @@ if __name__ == "__main__":
             "to": "Счет 14211924144426031657"
         }
     ]
-
     usd_transactions = filter_by_currency(transactions, "USD")
     for i in range(2):
         print(next(usd_transactions)["id"])
-
-    descriptions = transaction_descriptions(transactions)
+        descriptions = transaction_descriptions(transactions)
     for _ in range(5):
         print(next(descriptions))
-
     for card_number in card_number_generator(1, 5):
         print(card_number)
+"""

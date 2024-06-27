@@ -22,6 +22,7 @@ def sort_by_date(id_info: List[dict], ascending: bool = True) -> List[dict]:
     return sorted_id_info
 
 
+"""
 if __name__ == "__main__":
     tests_info = [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'},
                   {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'},
@@ -33,3 +34,4 @@ if __name__ == "__main__":
 
     print(sort_by_date(tests_info))
     print(sort_by_date(tests_info, True))
+"""

@@ -28,6 +28,7 @@ def mask_account_card(card_or_account: str) -> str:
         return "Не верно введенный номер счета или карты"
 
 
+"""
 if __name__ == "__main__":
     print(get_data("2018-07-11T02:26:18.671407"))
     print(mask_account_card("Maestro 1596837868705199"))
@@ -39,3 +40,4 @@ if __name__ == "__main__":
     print(mask_account_card("Visa Gold 5999414228426353"))
     print(mask_account_card("Счет 73654108430135874305"))
     print(mask_account_card("Карта"))
+"""

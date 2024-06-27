@@ -28,6 +28,7 @@ def get_mask_account(account: list) -> str:
     return " ".join(account)
 
 
+"""
 if __name__ == "__main__":
     print(get_mask_card_number("Maestro 1596837868705199".split()))
     print(get_mask_account("Счет 64686473678894779589".split()))
@@ -37,3 +38,4 @@ if __name__ == "__main__":
     print(get_mask_card_number("Visa Platinum 8990922113665229".split()))
     print(get_mask_card_number("Visa Gold 5999414228426353".split()))
     print(get_mask_account("Счет 73654108430135874305".split()))
+"""
