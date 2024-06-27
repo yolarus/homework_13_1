@@ -15,6 +15,25 @@ def transaction_descriptions(transactions: list[dict]) -> str:
         yield transaction["description"]
 
 
+def card_number_generator(start: int, stop: int) -> str:
+    """
+    Функция возвращает генератор номеров банковских карт в формате XXXX XXXX XXXX XXXX
+    """
+    for num in range(start, stop + 1):
+        if len(str(num)) < 16:
+            num_without_spaces = "0" * (16 - len(str(num))) + str(num)
+        else:
+            num_without_spaces = str(num)
+
+        list_num = list(num_without_spaces)
+        counter = 0
+        for index in range(1, len(list_num)):
+            if index % 4 == 0:
+                list_num.insert(index + counter, " ")
+                counter += 1
+        yield "".join(list_num)
+
+
 if __name__ == "__main__":
     transactions = [
         {
@@ -101,3 +120,6 @@ if __name__ == "__main__":
     descriptions = transaction_descriptions(transactions)
     for _ in range(5):
         print(next(descriptions))
+
+    for card_number in card_number_generator(1, 5):
+        print(card_number)
