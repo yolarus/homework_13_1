@@ -22,6 +22,11 @@ def card_number_generator(start: int, stop: int) -> Generator:
     """
     Функция возвращает генератор номеров банковских карт в формате XXXX XXXX XXXX XXXX
     """
+    if stop < start:
+        exchange = start
+        start = stop
+        stop = exchange
+
     for num in range(start, stop + 1):
         if len(str(num)) < 16:
             num_without_spaces = "0" * (16 - len(str(num))) + str(num)
