@@ -7,6 +7,14 @@ def filter_by_currency(transactions: list[dict], currency: str) -> dict:
             yield transaction
 
 
+def transaction_descriptions(transactions: list[dict]) -> str:
+    """
+    Функция принимает список банковских операций и возвращает итератор, выдающий описание операции
+    """
+    for transaction in transactions:
+        yield transaction["description"]
+
+
 if __name__ == "__main__":
     transactions = [
         {
@@ -87,6 +95,9 @@ if __name__ == "__main__":
     ]
 
     usd_transactions = filter_by_currency(transactions, "USD")
-
     for i in range(2):
         print(next(usd_transactions)["id"])
+
+    descriptions = transaction_descriptions(transactions)
+    for _ in range(5):
+        print(next(descriptions))
