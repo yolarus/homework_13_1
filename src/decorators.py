@@ -40,6 +40,7 @@ def log(*, filename: str = None) -> Callable:
     return decorator
 
 
+"""
 if __name__ == "__main__":
     @log(filename="mylog.txt")
     def example_1(x, *, y=1):
@@ -56,3 +57,4 @@ if __name__ == "__main__":
     print(example_2([1, 2, 3]))
     print(example_2([]))
     print(example_2(33))
+"""
