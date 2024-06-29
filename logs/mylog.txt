@@ -1,0 +1,3 @@
+example_1 ok
+example_1 'int' object is not subscriptable Inputs: ((0,), {})
+example_1 list index out of range Inputs: (([],), {'y': 3})
