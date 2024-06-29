@@ -2,16 +2,16 @@ import os
 
 
 from functools import wraps
-from typing import Callable
+from typing import Callable, Any
 
 
-def log(*, filename: str = None) -> Callable:
+def log(*, filename: str = "") -> Callable:
     """
     Формирует журнал вызова функций
     """
-    def decorator(func):
+    def decorator(func: Callable) -> Callable:
         @wraps(func)
-        def wrapper(*args, **kwargs):
+        def wrapper(*args: list, **kwargs: dict) -> Any:
             try:
                 result = func(*args, **kwargs)
                 if filename:
@@ -36,6 +36,7 @@ def log(*, filename: str = None) -> Callable:
                         file.write(f"{func.__name__} {e} Inputs: {args, kwargs}\n")
                 else:
                     print(f"{func.__name__} {e} Inputs: {args, kwargs}")
+                    return None
         return wrapper
     return decorator
 
