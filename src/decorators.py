@@ -14,29 +14,21 @@ def log(*, filename: str = "") -> Callable:
         def wrapper(*args: list, **kwargs: dict) -> Any:
             try:
                 result = func(*args, **kwargs)
-                if filename:
-                    log_path = os.path.join(os.path.dirname(os.path.abspath("")), "logs/", filename)
-                    if os.path.exists(log_path):
-                        marker = "a"
-                    else:
-                        marker = "w"
-                    with open(log_path, marker) as file:
-                        file.write(f"{func.__name__} ok\n")
-                else:
-                    print(f"{func.__name__} ok")
-                return result
+                message = f"{func.__name__} ok"
             except Exception as e:
-                if filename:
-                    log_path = os.path.join(os.path.dirname(os.path.abspath("")), "logs/", filename)
-                    if os.path.exists(log_path):
-                        marker = "a"
-                    else:
-                        marker = "w"
-                    with open(log_path, marker) as file:
-                        file.write(f"{func.__name__} {e} Inputs: {args, kwargs}\n")
+                result = None
+                message = f"{func.__name__} {e} Inputs: {args, kwargs}"
+            if filename:
+                log_path = os.path.join(os.path.dirname(os.path.abspath("")), "logs/", filename)
+                if os.path.exists(log_path):
+                    marker = "a"
                 else:
-                    print(f"{func.__name__} {e} Inputs: {args, kwargs}")
-                    return None
+                    marker = "w"
+                with open(log_path, marker) as file:
+                    file.write(message + "\n")
+            else:
+                print(message)
+            return result
         return wrapper
     return decorator
 
