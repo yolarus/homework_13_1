@@ -19,7 +19,7 @@ def log(*, filename: str = "") -> Callable:
                 result = None
                 message = f"{func.__name__} {e} Inputs: {args, kwargs}"
             if filename:
-                log_path = os.path.join(os.path.dirname(os.path.abspath("")), "logs/", filename)
+                log_path = os.path.join("logs/", filename)
                 if os.path.exists(log_path):
                     marker = "a"
                 else:

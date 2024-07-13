@@ -1,4 +1,4 @@
-# import os
+import os
 
 
 from typing import Any
@@ -27,13 +27,12 @@ def test_log_terminal_error(capsys: Any) -> None:
     assert capture.out == "example_2 'int' object is not subscriptable Inputs: ((0,), {})\n"
 
 
-"""
+
 def test_log_file_ok(capsys: Any) -> None:
     @log(filename="test_ok.txt")
     def example_3(x: list) -> Any:
         return x[0]
-    log_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath("tests_decorators.py"))),
-                            "logs/test_ok.txt")
+    log_path = "logs/test_ok.txt"
     with open(log_path, "w"):
         pass
     example_3([1, 2, 3])
@@ -45,11 +44,10 @@ def test_log_file_error(capsys: Any) -> None:
     @log(filename="test_error.txt")
     def example_4(x: list) -> Any:
         return x[0]
-    log_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath("tests_decorators.py"))),
-                            "logs/test_error.txt")
+    log_path = "logs/test_error.txt"
     with open(log_path, "w"):
         pass
     example_4(0)
     with open(log_path, "r") as file:
         assert file.read() == "example_4 'int' object is not subscriptable Inputs: ((0,), {})\n"
-"""
+
