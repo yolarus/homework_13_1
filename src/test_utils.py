@@ -1,5 +1,5 @@
-from unittest.mock import patch, mock_open
 from typing import Any
+from unittest.mock import mock_open, patch
 
 from src.utils import get_financial_transactions
 

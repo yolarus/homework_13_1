@@ -1,6 +1,5 @@
 from typing import Any
 
-
 from src.decorators import log
 
 

@@ -1,10 +1,11 @@
-import requests
 import os
+from typing import Any
 
+import requests
 from dotenv import load_dotenv
 
 
-def get_sum_of_transaction(user_trans: dict) -> float:
+def get_sum_of_transaction(user_trans: dict) -> Any:
     currency = user_trans["operationAmount"]["currency"]["code"]
     amount = user_trans["operationAmount"]["amount"]
     if currency in ["USD", "EUR"]:
