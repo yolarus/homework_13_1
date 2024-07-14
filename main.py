@@ -1,6 +1,9 @@
-from src.processing import filter_by_state, sort_by_date
 from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
+from src.processing import filter_by_state, sort_by_date
+from src.utils import get_financial_transactions
 from src.widget import mask_account_card, get_data
+
+
 
 if __name__ == "__main__":
     print(mask_account_card("Maestro 1596837868705199"))
@@ -113,3 +116,8 @@ if __name__ == "__main__":
 
     for card_number in card_number_generator(1, 5):
         print(card_number)
+
+    print(get_financial_transactions("operations.json"))
+    print(get_financial_transactions("empty.json"))
+    print(get_financial_transactions("empty_dict.json"))
+    print(get_financial_transactions(" "))
