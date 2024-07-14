@@ -2,7 +2,7 @@ from src.generators import card_number_generator, filter_by_currency, transactio
 from src.processing import filter_by_state, sort_by_date
 from src.utils import get_financial_transactions
 from src.widget import mask_account_card, get_data
-
+from src.external_api import get_sum_of_transaction
 
 
 if __name__ == "__main__":
@@ -117,4 +117,5 @@ if __name__ == "__main__":
     for card_number in card_number_generator(1, 5):
         print(card_number)
 
-    print(get_financial_transactions("operations.json"))
+    print(get_sum_of_transaction(get_financial_transactions("operations.json")[0]))
+    print(get_sum_of_transaction(get_financial_transactions("operations.json")[1]))
