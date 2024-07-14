@@ -118,6 +118,3 @@ if __name__ == "__main__":
         print(card_number)
 
     print(get_financial_transactions("operations.json"))
-    print(get_financial_transactions("empty.json"))
-    print(get_financial_transactions("empty_dict.json"))
-    print(get_financial_transactions(" "))

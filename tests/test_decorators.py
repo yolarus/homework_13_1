@@ -1,6 +1,3 @@
-import os
-
-
 from typing import Any
 
 
@@ -27,8 +24,7 @@ def test_log_terminal_error(capsys: Any) -> None:
     assert capture.out == "example_2 'int' object is not subscriptable Inputs: ((0,), {})\n"
 
 
-
-def test_log_file_ok(capsys: Any) -> None:
+def test_log_file_ok() -> None:
     @log(filename="test_ok.txt")
     def example_3(x: list) -> Any:
         return x[0]
@@ -40,7 +36,7 @@ def test_log_file_ok(capsys: Any) -> None:
         assert file.read() == "example_3 ok\n"
 
 
-def test_log_file_error(capsys: Any) -> None:
+def test_log_file_error() -> None:
     @log(filename="test_error.txt")
     def example_4(x: list) -> Any:
         return x[0]
@@ -50,4 +46,3 @@ def test_log_file_error(capsys: Any) -> None:
     example_4(0)
     with open(log_path, "r") as file:
         assert file.read() == "example_4 'int' object is not subscriptable Inputs: ((0,), {})\n"
-
