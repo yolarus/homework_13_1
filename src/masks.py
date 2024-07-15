@@ -40,9 +40,9 @@ def get_mask_account(account: list) -> str:
     """
     Функция принимает на вход информацию о счете и возвращает зашифрованную информацию
     """
-    masks_logger.info(f"Счет {" ".join(account)} передан для шифровки номера")
+    masks_logger.info(f"{" ".join(account)} передан для шифровки номера")
     account[-1] = f"**{account[-1][-2:]}"
-    masks_logger.info(f"Зашифрованный счет {" ".join(account)}")
+    masks_logger.info(f"Зашифрованный {" ".join(account)}")
 
     return " ".join(account)
 
