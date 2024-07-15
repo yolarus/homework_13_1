@@ -6,7 +6,7 @@ masks_logger = logging.getLogger(__name__)
 masks_file_formater = logging.Formatter(
     "%(asctime)s - %(name)s - %(filename)s - %(funcName)s - %(levelname)s - %(message)s",
     "%d.%m.%Y %H:%M:%S")
-masks_file_handler = logging.FileHandler(f'logs/{__name__}.log','w')
+masks_file_handler = logging.FileHandler(f'logs/{__name__}.log', 'w')
 masks_file_handler.setFormatter(masks_file_formater)
 masks_logger.setLevel(logging.DEBUG)
 masks_logger.addHandler(masks_file_handler)

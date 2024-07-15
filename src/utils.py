@@ -6,7 +6,7 @@ utils_logger = logging.getLogger(__name__)
 utils_file_formater = logging.Formatter(
     "%(asctime)s - %(name)s - %(filename)s - %(funcName)s - %(levelname)s - %(message)s",
     "%d.%m.%Y %H:%M:%S")
-utils_file_handler = logging.FileHandler(f'logs/{__name__}.log','w')
+utils_file_handler = logging.FileHandler(f'logs/{__name__}.log', 'w')
 utils_file_handler.setFormatter(utils_file_formater)
 utils_logger.setLevel(logging.DEBUG)
 utils_logger.addHandler(utils_file_handler)
