@@ -6,6 +6,10 @@ from dotenv import load_dotenv
 
 
 def get_sum_of_transaction(user_trans: dict) -> Any:
+    """
+    Функция принимает транзакцию и возвращает возвращает ее сумму в рублях, если  транзакция была в USD или EUR,
+     происходит конвертация с помощью Exchange Rates Data API
+    """
     currency = user_trans["operationAmount"]["currency"]["code"]
     amount = user_trans["operationAmount"]["amount"]
     if currency in ["USD", "EUR"]:
