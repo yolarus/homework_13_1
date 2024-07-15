@@ -34,5 +34,5 @@ def get_financial_transactions(file_name: str) -> list[dict]:
         return []
     except json.JSONDecodeError:
         utils_logger.error(f"Файл {file_name} не содержит JSON-строки")
-        print("Файл с исходными данными не содержит JSON-строки")
+        print(f"Файл {file_name} не содержит JSON-строки")
         return []
