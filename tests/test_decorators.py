@@ -27,7 +27,7 @@ def test_log_file_ok() -> None:
     @log(filename="test_ok.txt")
     def example_3(x: list) -> Any:
         return x[0]
-    log_path = "logs/test_ok.txt"
+    log_path = "logs/decorator_logs/test_ok.txt"
     with open(log_path, "w"):
         pass
     example_3([1, 2, 3])
@@ -39,7 +39,7 @@ def test_log_file_error() -> None:
     @log(filename="test_error.txt")
     def example_4(x: list) -> Any:
         return x[0]
-    log_path = "logs/test_error.txt"
+    log_path = "logs/decorator_logs/test_error.txt"
     with open(log_path, "w"):
         pass
     example_4(0)

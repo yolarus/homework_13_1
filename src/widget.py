@@ -1,3 +1,5 @@
+from typing import Any
+
 from src.masks import get_mask_account, get_mask_card_number
 
 
@@ -11,7 +13,7 @@ def get_data(user_date_time: str) -> str:
     return format_user_date
 
 
-def mask_account_card(card_or_account: str) -> str:
+def mask_account_card(card_or_account: str) -> Any:
     """
     Функция принимает на вход информацию о карте или счете и возвращает зашифрованную информацию
     """
