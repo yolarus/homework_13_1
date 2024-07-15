@@ -17,7 +17,7 @@ def test_get_financial_transactions() -> None:
                          }]"""
     with patch("builtins.open", mock_open(read_data=data)) as mock_file:
 
-        assert get_financial_transactions("test.json") == [{"id": 441945886,
+        assert get_financial_transactions("empty_list.json") == [{"id": 441945886,
                                                             "state": "EXECUTED",
                                                             "date": "2019-08-26T10:50:58.294041",
                                                             "operationAmount": {"amount": "31957.58",
@@ -27,15 +27,15 @@ def test_get_financial_transactions() -> None:
                                                             "from": "Maestro 1596837868705199",
                                                             "to": "Счет 64686473678894779589"
                                                             }]
-    mock_file.assert_called_once_with("data/test.json", "r")
+    mock_file.assert_called_once_with("data/empty_list.json", "r")
 
 
 def test_get_financial_transactions_without_json(capsys: Any) -> None:
     data = """Этот файл не содержит JSON-строки"""
     with patch("builtins.open", mock_open(read_data=data)) as mock_file:
 
-        assert get_financial_transactions("test.json") == []
-    mock_file.assert_called_once_with("data/test.json", "r")
+        assert get_financial_transactions("empty_list.json") == []
+    mock_file.assert_called_once_with("data/empty_list.json", "r")
     capture = capsys.readouterr()
     assert capture.out == "Файл с исходными данными не содержит JSON-строки\n"
 
@@ -44,13 +44,13 @@ def test_get_financial_transactions_without_list(capsys: Any) -> None:
     data = """{}"""
     with patch("builtins.open", mock_open(read_data=data)) as mock_file:
 
-        assert get_financial_transactions("test.json") == []
-    mock_file.assert_called_once_with("data/test.json", "r")
+        assert get_financial_transactions("empty_list.json") == []
+    mock_file.assert_called_once_with("data/empty_list.json", "r")
     capture = capsys.readouterr()
     assert capture.out == "Файл с исходными данными не содержит список\n"
 
 
 def test_get_financial_transactions_wrong_filename(capsys: Any) -> None:
-    get_financial_transactions("test.json")
+    get_financial_transactions("empty_list.json")
     capture = capsys.readouterr()
     assert capture.out == "Неверно указан файл с исходными данными\n"

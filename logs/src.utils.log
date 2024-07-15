@@ -1,0 +1,20 @@
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл test_data/file_not_found.json
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - ERROR - Файл test_data/file_not_found.json не найден
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл test_data/not_json.json
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - INFO - Файл test_data/not_json.json успешно открыт
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - ERROR - Файл test_data/not_json.json не содержит JSON-строки
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл test_data/not_list.json
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - INFO - Файл test_data/not_list.json успешно открыт
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - ERROR - Файл test_data/not_list.json не содержит список
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл test_data/empty_list.json
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - INFO - Файл test_data/empty_list.json успешно открыт
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - INFO - Файл test_data/empty_list.json успешно десериализован
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл operations.json
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - INFO - Файл operations.json успешно открыт
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - INFO - Файл operations.json успешно десериализован
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл operations.json
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - INFO - Файл operations.json успешно открыт
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - INFO - Файл operations.json успешно десериализован
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл operations.json
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - INFO - Файл operations.json успешно открыт
+15.07.2024 22:19:45 - src.utils - utils.py - get_financial_transactions - INFO - Файл operations.json успешно десериализован

@@ -1,16 +1,16 @@
-15.07.2024 19:35:41 - src.masks - masks.py - get_mask_card_number - INFO - Карта Maestro 1596837868705199 передана для шифровки номера
-15.07.2024 19:35:41 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта Maestro 1596 83** **** 5199
-15.07.2024 19:35:41 - src.masks - masks.py - get_mask_account - INFO - Счет Счет 64686473678894779589 передан для шифровки номера
-15.07.2024 19:35:41 - src.masks - masks.py - get_mask_account - INFO - Зашифрованный счет Счет **89
-15.07.2024 19:35:41 - src.masks - masks.py - get_mask_card_number - INFO - Карта MasterCard 7158300734726758 передана для шифровки номера
-15.07.2024 19:35:41 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта MasterCard 7158 30** **** 6758
-15.07.2024 19:35:41 - src.masks - masks.py - get_mask_account - INFO - Счет Счет 35383033474447895560 передан для шифровки номера
-15.07.2024 19:35:41 - src.masks - masks.py - get_mask_account - INFO - Зашифрованный счет Счет **60
-15.07.2024 19:35:41 - src.masks - masks.py - get_mask_card_number - INFO - Карта Visa Classic 6831982476737658 передана для шифровки номера
-15.07.2024 19:35:41 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта Visa Classic 6831 98** **** 7658
-15.07.2024 19:35:41 - src.masks - masks.py - get_mask_card_number - INFO - Карта Visa Platinum 8990922113665229 передана для шифровки номера
-15.07.2024 19:35:41 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта Visa Platinum 8990 92** **** 5229
-15.07.2024 19:35:41 - src.masks - masks.py - get_mask_card_number - INFO - Карта Visa Gold 5999414228426353 передана для шифровки номера
-15.07.2024 19:35:41 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта Visa Gold 5999 41** **** 6353
-15.07.2024 19:35:41 - src.masks - masks.py - get_mask_account - INFO - Счет Счет 73654108430135874305 передан для шифровки номера
-15.07.2024 19:35:41 - src.masks - masks.py - get_mask_account - INFO - Зашифрованный счет Счет **05
+15.07.2024 22:19:45 - src.masks - masks.py - get_mask_card_number - INFO - Карта Maestro 1596837868705199 передана для шифровки номера
+15.07.2024 22:19:45 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта Maestro 1596 83** **** 5199
+15.07.2024 22:19:45 - src.masks - masks.py - get_mask_account - INFO - Счет Счет 64686473678894779589 передан для шифровки номера
+15.07.2024 22:19:45 - src.masks - masks.py - get_mask_account - INFO - Зашифрованный счет Счет **89
+15.07.2024 22:19:45 - src.masks - masks.py - get_mask_card_number - INFO - Карта MasterCard 7158300734726758 передана для шифровки номера
+15.07.2024 22:19:45 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта MasterCard 7158 30** **** 6758
+15.07.2024 22:19:45 - src.masks - masks.py - get_mask_account - INFO - Счет Счет 35383033474447895560 передан для шифровки номера
+15.07.2024 22:19:45 - src.masks - masks.py - get_mask_account - INFO - Зашифрованный счет Счет **60
+15.07.2024 22:19:45 - src.masks - masks.py - get_mask_card_number - INFO - Карта Visa Classic 6831982476737658 передана для шифровки номера
+15.07.2024 22:19:45 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта Visa Classic 6831 98** **** 7658
+15.07.2024 22:19:45 - src.masks - masks.py - get_mask_card_number - INFO - Карта Visa Platinum 8990922113665229 передана для шифровки номера
+15.07.2024 22:19:45 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта Visa Platinum 8990 92** **** 5229
+15.07.2024 22:19:45 - src.masks - masks.py - get_mask_card_number - INFO - Карта Visa Gold 5999414228426353 передана для шифровки номера
+15.07.2024 22:19:45 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта Visa Gold 5999 41** **** 6353
+15.07.2024 22:19:45 - src.masks - masks.py - get_mask_account - INFO - Счет Счет 73654108430135874305 передан для шифровки номера
+15.07.2024 22:19:45 - src.masks - masks.py - get_mask_account - INFO - Зашифрованный счет Счет **05

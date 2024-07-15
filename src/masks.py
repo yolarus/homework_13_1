@@ -2,7 +2,6 @@ import logging
 
 from src.decorators import log
 
-
 masks_logger = logging.getLogger(__name__)
 masks_file_formater = logging.Formatter(
     "%(asctime)s - %(name)s - %(filename)s - %(funcName)s - %(levelname)s - %(message)s",

@@ -117,6 +117,10 @@ if __name__ == "__main__":
     for card_number in card_number_generator(1, 5):
         print(card_number)
 
+    print(get_financial_transactions("test_data/file_not_found.json"))
+    print(get_financial_transactions("test_data/not_json.json"))
+    print(get_financial_transactions("test_data/not_list.json"))
+    print(get_financial_transactions("test_data/empty_list.json"))
     print(get_financial_transactions("operations.json"))
     print(get_sum_of_transaction(get_financial_transactions("operations.json")[0]))
     print(get_sum_of_transaction(get_financial_transactions("operations.json")[1]))
