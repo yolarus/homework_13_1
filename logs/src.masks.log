@@ -1,16 +1,16 @@
-15.07.2024 22:44:13 - src.masks - masks.py - get_mask_card_number - INFO - Карта Maestro 1596837868705199 передана для шифровки номера
-15.07.2024 22:44:13 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта Maestro 1596 83** **** 5199
-15.07.2024 22:44:13 - src.masks - masks.py - get_mask_card_number - INFO - Карта MasterCard 7158300734726758 передана для шифровки номера
-15.07.2024 22:44:13 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта MasterCard 7158 30** **** 6758
-15.07.2024 22:44:13 - src.masks - masks.py - get_mask_card_number - INFO - Карта Visa Classic 6831982476737658 передана для шифровки номера
-15.07.2024 22:44:13 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта Visa Classic 6831 98** **** 7658
-15.07.2024 22:44:13 - src.masks - masks.py - get_mask_account - INFO - Счет Счет 64686473678894779589 передан для шифровки номера
-15.07.2024 22:44:13 - src.masks - masks.py - get_mask_account - INFO - Зашифрованный счет Счет **89
-15.07.2024 22:44:13 - src.masks - masks.py - get_mask_card_number - INFO - Карта Maestro 1596837868705199 передана для шифровки номера
-15.07.2024 22:44:13 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта Maestro 1596 83** **** 5199
-15.07.2024 22:44:13 - src.masks - masks.py - get_mask_card_number - INFO - Карта Visa Classic 6831982476737658 передана для шифровки номера
-15.07.2024 22:44:13 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта Visa Classic 6831 98** **** 7658
-15.07.2024 22:44:13 - src.masks - masks.py - get_mask_card_number - INFO - Карта MasterCard 7158300734726758 передана для шифровки номера
-15.07.2024 22:44:13 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта MasterCard 7158 30** **** 6758
-15.07.2024 22:44:13 - src.masks - masks.py - get_mask_account - INFO - Счет Счет 64686473678894779589 передан для шифровки номера
-15.07.2024 22:44:13 - src.masks - masks.py - get_mask_account - INFO - Зашифрованный счет Счет **89
+15.07.2024 22:46:33 - src.masks - masks.py - get_mask_card_number - INFO - Карта Maestro 1596837868705199 передана для шифровки номера
+15.07.2024 22:46:33 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта Maestro 1596 83** **** 5199
+15.07.2024 22:46:33 - src.masks - masks.py - get_mask_card_number - INFO - Карта MasterCard 7158300734726758 передана для шифровки номера
+15.07.2024 22:46:33 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта MasterCard 7158 30** **** 6758
+15.07.2024 22:46:33 - src.masks - masks.py - get_mask_card_number - INFO - Карта Visa Classic 6831982476737658 передана для шифровки номера
+15.07.2024 22:46:33 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта Visa Classic 6831 98** **** 7658
+15.07.2024 22:46:33 - src.masks - masks.py - get_mask_account - INFO - Счет Счет 64686473678894779589 передан для шифровки номера
+15.07.2024 22:46:33 - src.masks - masks.py - get_mask_account - INFO - Зашифрованный счет Счет **89
+15.07.2024 22:46:33 - src.masks - masks.py - get_mask_card_number - INFO - Карта Maestro 1596837868705199 передана для шифровки номера
+15.07.2024 22:46:33 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта Maestro 1596 83** **** 5199
+15.07.2024 22:46:33 - src.masks - masks.py - get_mask_card_number - INFO - Карта Visa Classic 6831982476737658 передана для шифровки номера
+15.07.2024 22:46:33 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта Visa Classic 6831 98** **** 7658
+15.07.2024 22:46:33 - src.masks - masks.py - get_mask_card_number - INFO - Карта MasterCard 7158300734726758 передана для шифровки номера
+15.07.2024 22:46:33 - src.masks - masks.py - get_mask_card_number - INFO - Зашифрованная карта MasterCard 7158 30** **** 6758
+15.07.2024 22:46:33 - src.masks - masks.py - get_mask_account - INFO - Счет Счет 64686473678894779589 передан для шифровки номера
+15.07.2024 22:46:33 - src.masks - masks.py - get_mask_account - INFO - Зашифрованный счет Счет **89

@@ -1,13 +1,12 @@
-# Домашняя работа №12, урок 12.1.
+# Домашняя работа №13, урок 12.2.
 
 ## Описание
-1. Добавлены модули "utils.py" и "external_api.py"
-2. Для модулей "utils.py" и "external_api.py" выполнено тестирование
-3. Скорректирован файл README.md
-4. Выполнена проверка mypy и flake8
+1. Добавлены логеры к модулям "masks.py" и "utils.py"
+2. Скорректирован файл README.md
+3. Выполнена проверка mypy и flake8
 
 ## Установка проекта
-клонирование проекта из [GitHub](https://github.com/yolarus/homework_12_1) по HTTPS-токену или SSH-ключу
+клонирование проекта из [GitHub](https://github.com/yolarus/homework_12_2) по HTTPS-токену или SSH-ключу
 
 ## Запуск
 ~ python3 main.py
