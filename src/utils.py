@@ -2,6 +2,7 @@ import csv
 import json
 import logging
 import os
+from typing import Any
 
 import pandas as pd
 
@@ -15,7 +16,7 @@ utils_logger.setLevel(logging.DEBUG)
 utils_logger.addHandler(utils_file_handler)
 
 
-def get_financial_transactions(file_name: str) -> list[dict]:
+def get_financial_transactions(file_name: str) -> Any:
     """
     Функция принимает имя JSON-файла и возвращает список словарей с данными о финансовых транзакциях.
     """
@@ -53,7 +54,7 @@ def get_financial_transactions(file_name: str) -> list[dict]:
             elif file_name.endswith(".xlsx"):
 
                 utils_logger.info(f"Формат файла {file_name} - .xlsx - считываем данные из файла")
-                transactions = pd.read_excel(os.path.join("data/",file_name))
+                transactions = pd.read_excel(os.path.join("data/", file_name))
                 transactions = transactions.dropna(subset="id")
                 fieldnames = transactions.columns.to_list()
                 list_of_transactions = []
@@ -75,4 +76,3 @@ def get_financial_transactions(file_name: str) -> list[dict]:
         utils_logger.error(f"Файл {file_name} не найден")
         print(f"Файл {file_name} не найден")
         return []
-

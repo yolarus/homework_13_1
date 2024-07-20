@@ -1,17 +1,31 @@
-20.07.2024 18:23:23 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл test.json
-20.07.2024 18:23:23 - src.utils - utils.py - get_financial_transactions - INFO - Файл test.json успешно открыт
-20.07.2024 18:23:23 - src.utils - utils.py - get_financial_transactions - INFO - Определение формата файла test.json
-20.07.2024 18:23:23 - src.utils - utils.py - get_financial_transactions - INFO - Формата файла test.json - .json - приступаем к десериализации
-20.07.2024 18:23:23 - src.utils - utils.py - get_financial_transactions - INFO - Файл test.json успешно десериализован
-20.07.2024 18:23:23 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл test.json
-20.07.2024 18:23:23 - src.utils - utils.py - get_financial_transactions - INFO - Файл test.json успешно открыт
-20.07.2024 18:23:23 - src.utils - utils.py - get_financial_transactions - INFO - Определение формата файла test.json
-20.07.2024 18:23:23 - src.utils - utils.py - get_financial_transactions - INFO - Формата файла test.json - .json - приступаем к десериализации
-20.07.2024 18:23:23 - src.utils - utils.py - get_financial_transactions - ERROR - Файл test.json не содержит JSON-строки
-20.07.2024 18:23:23 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл test.json
-20.07.2024 18:23:23 - src.utils - utils.py - get_financial_transactions - INFO - Файл test.json успешно открыт
-20.07.2024 18:23:23 - src.utils - utils.py - get_financial_transactions - INFO - Определение формата файла test.json
-20.07.2024 18:23:23 - src.utils - utils.py - get_financial_transactions - INFO - Формата файла test.json - .json - приступаем к десериализации
-20.07.2024 18:23:23 - src.utils - utils.py - get_financial_transactions - ERROR - Файл test.json не содержит список
-20.07.2024 18:23:23 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл test.json
-20.07.2024 18:23:23 - src.utils - utils.py - get_financial_transactions - ERROR - Файл test.json не найден
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл test.json
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Файл test.json успешно открыт
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Определение формата файла test.json
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Формата файла test.json - .json - приступаем к десериализации
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Файл test.json успешно десериализован
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл test.json
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Файл test.json успешно открыт
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Определение формата файла test.json
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Формата файла test.json - .json - приступаем к десериализации
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - ERROR - Файл test.json не содержит JSON-строки
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл test.json
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Файл test.json успешно открыт
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Определение формата файла test.json
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Формата файла test.json - .json - приступаем к десериализации
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - ERROR - Файл test.json не содержит список
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл test.json
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - ERROR - Файл test.json не найден
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл test.csv
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Файл test.csv успешно открыт
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Определение формата файла test.csv
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Формат файла test.csv - .csv - считываем данные из файла
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Данные из файла test.csv преобразованы в список словарей
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл test.txt
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Файл test.txt успешно открыт
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Определение формата файла test.txt
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - ERROR - Неверный формат файла test.txt
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Попытка открыть файл test.xlsx
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Файл test.xlsx успешно открыт
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Определение формата файла test.xlsx
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Формат файла test.xlsx - .xlsx - считываем данные из файла
+20.07.2024 19:23:32 - src.utils - utils.py - get_financial_transactions - INFO - Данные из файла test.xlsx преобразованы в список словарей
