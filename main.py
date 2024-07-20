@@ -124,3 +124,5 @@ if __name__ == "__main__":
     print(get_financial_transactions("operations.json"))
     print(get_sum_of_transaction(get_financial_transactions("operations.json")[0]))
     print(get_sum_of_transaction(get_financial_transactions("operations.json")[1]))
+
+    print(get_financial_transactions("transactions.csv")[0])
