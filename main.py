@@ -121,8 +121,10 @@ if __name__ == "__main__":
     print(get_financial_transactions("test_data/not_json.json"))
     print(get_financial_transactions("test_data/not_list.json"))
     print(get_financial_transactions("test_data/empty_list.json"))
-    print(get_financial_transactions("operations.json"))
+    print(get_financial_transactions("operations.json")[0:1])
     print(get_sum_of_transaction(get_financial_transactions("operations.json")[0]))
-    print(get_sum_of_transaction(get_financial_transactions("operations.json")[1]))
+    # print(get_sum_of_transaction(get_financial_transactions("operations.json")[1]))
 
-    print(get_financial_transactions("transactions.csv")[0])
+    print(get_financial_transactions("transactions.csv")[0:1])
+    print(get_financial_transactions("transactions_excel.xlsx")[0:1])
+

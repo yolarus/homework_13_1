@@ -26,6 +26,7 @@ def get_financial_transactions(file_name: str) -> list[dict]:
 
             utils_logger.info(f"Определение формата файла {file_name}")
             if file_name.endswith(".json"):
+
                 utils_logger.info(f"Формата файла {file_name} - .json - приступаем к десериализации")
                 try:
                     list_of_transactions = json.load(data)
@@ -40,18 +41,36 @@ def get_financial_transactions(file_name: str) -> list[dict]:
                     utils_logger.error(f"Файл {file_name} не содержит JSON-строки")
                     print(f"Файл {file_name} не содержит JSON-строки")
                     return []
+
             elif file_name.endswith(".csv"):
-                utils_logger.info(f"Формата файла {file_name} - .csv - считываем данные из файла")
+
+                utils_logger.info(f"Формат файла {file_name} - .csv - считываем данные из файла")
                 transactions = csv.DictReader(data, delimiter=";")
                 list_of_transactions = list(transactions)
                 utils_logger.info(f"Данные из файла {file_name} преобразованы в список словарей")
                 return list_of_transactions
 
-            elif file_name.endswith("xlsx"):
-                pass
+            elif file_name.endswith(".xlsx"):
+
+                utils_logger.info(f"Формат файла {file_name} - .xlsx - считываем данные из файла")
+                transactions = pd.read_excel(os.path.join("data/",file_name))
+                transactions = transactions.dropna(subset="id")
+                fieldnames = transactions.columns.to_list()
+                list_of_transactions = []
+                for row in transactions.iterrows():
+                    dict_transaction = {}
+                    for i, element in enumerate(row[1]):
+                        dict_transaction[fieldnames[i]] = element
+                    list_of_transactions.append(dict_transaction)
+                utils_logger.info(f"Данные из файла {file_name} преобразованы в список словарей")
+                return list_of_transactions
+
             else:
+
                 utils_logger.error(f"Неверный формат файла {file_name}")
                 print(f"Неверный формат файла {file_name}")
+                return []
+
     except FileNotFoundError:
         utils_logger.error(f"Файл {file_name} не найден")
         print(f"Файл {file_name} не найден")
