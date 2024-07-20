@@ -18,7 +18,7 @@ def get_mask_card_number(card_info: list) -> str:
     Функция принимает на вход информацию о карте и возвращает зашифрованную информацию
     """
     # Шифруем номер карты
-    masks_logger.info(f"Карта {" ".join(card_info)} передана для шифровки номера")
+    masks_logger.info(f"Карта {' '.join(card_info)} передана для шифровки номера")
     card_info[-1] = f"{card_info[-1][:6]}******{card_info[-1][-4:]}"
 
     # Оборачиваем номер карты в список для перебора и вставки пробелов
@@ -31,7 +31,7 @@ def get_mask_card_number(card_info: list) -> str:
     # Заменяем исходную строку с номером карты на зашифрованную с пробелами
     else:
         card_info[-1] = "".join(list_card_number)
-        masks_logger.info(f"Зашифрованная карта {" ".join(card_info)}")
+        masks_logger.info(f"Зашифрованная карта {' '.join(card_info)}")
 
     return " ".join(card_info)
 
@@ -40,9 +40,9 @@ def get_mask_account(account: list) -> str:
     """
     Функция принимает на вход информацию о счете и возвращает зашифрованную информацию
     """
-    masks_logger.info(f"{" ".join(account)} передан для шифровки номера")
+    masks_logger.info(f"{' '.join(account)} передан для шифровки номера")
     account[-1] = f"**{account[-1][-2:]}"
-    masks_logger.info(f"Зашифрованный {" ".join(account)}")
+    masks_logger.info(f"Зашифрованный {' '.join(account)}")
 
     return " ".join(account)
 
