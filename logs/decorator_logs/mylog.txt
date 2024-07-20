@@ -16,3 +16,8 @@ get_mask_card_number ok
 get_mask_card_number ok
 get_mask_card_number ok
 get_mask_card_number ok
+get_mask_card_number ok
+get_mask_card_number ok
+get_mask_card_number ok
+get_mask_card_number ok
+get_mask_card_number ok

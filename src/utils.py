@@ -4,6 +4,7 @@ import logging
 import os
 from typing import Any
 
+import pandas
 import pandas as pd
 
 utils_logger = logging.getLogger(__name__)
@@ -46,8 +47,8 @@ def get_financial_transactions(file_name: str) -> Any:
             elif file_name.endswith(".csv"):
 
                 utils_logger.info(f"Формат файла {file_name} - .csv - считываем данные из файла")
-                transactions = csv.DictReader(data, delimiter=";")
-                list_of_transactions = list(transactions)
+                transactions_dict = csv.DictReader(data, delimiter=";")
+                list_of_transactions = list(transactions_dict)
                 utils_logger.info(f"Данные из файла {file_name} преобразованы в список словарей")
                 return list_of_transactions
 
