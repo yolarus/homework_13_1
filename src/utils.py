@@ -1,6 +1,11 @@
+import csv
 import json
 import logging
 import os
+from typing import Any
+
+import pandas
+import pandas as pd
 
 utils_logger = logging.getLogger(__name__)
 utils_file_formater = logging.Formatter(
@@ -12,7 +17,7 @@ utils_logger.setLevel(logging.DEBUG)
 utils_logger.addHandler(utils_file_handler)
 
 
-def get_financial_transactions(file_name: str) -> list[dict]:
+def get_financial_transactions(file_name: str) -> Any:
     """
     Функция принимает имя JSON-файла и возвращает список словарей с данными о финансовых транзакциях.
     """
@@ -20,19 +25,55 @@ def get_financial_transactions(file_name: str) -> list[dict]:
         utils_logger.info(f"Попытка открыть файл {file_name}")
         with open(os.path.join("data/", file_name), "r") as data:
             utils_logger.info(f"Файл {file_name} успешно открыт")
-            list_of_transactions = json.load(data)
-            if isinstance(list_of_transactions, list):
-                utils_logger.info(f"Файл {file_name} успешно десериализован")
+
+            utils_logger.info(f"Определение формата файла {file_name}")
+            if file_name.endswith(".json"):
+
+                utils_logger.info(f"Формата файла {file_name} - .json - приступаем к десериализации")
+                try:
+                    list_of_transactions = json.load(data)
+                    if isinstance(list_of_transactions, list):
+                        utils_logger.info(f"Файл {file_name} успешно десериализован")
+                        return list_of_transactions
+                    else:
+                        utils_logger.error(f"Файл {file_name} не содержит список")
+                        print(f"Файл {file_name} не содержит список")
+                        return []
+                except json.JSONDecodeError:
+                    utils_logger.error(f"Файл {file_name} не содержит JSON-строки")
+                    print(f"Файл {file_name} не содержит JSON-строки")
+                    return []
+
+            elif file_name.endswith(".csv"):
+
+                utils_logger.info(f"Формат файла {file_name} - .csv - считываем данные из файла")
+                transactions_dict = csv.DictReader(data, delimiter=";")
+                list_of_transactions = list(transactions_dict)
+                utils_logger.info(f"Данные из файла {file_name} преобразованы в список словарей")
                 return list_of_transactions
+
+            elif file_name.endswith(".xlsx"):
+
+                utils_logger.info(f"Формат файла {file_name} - .xlsx - считываем данные из файла")
+                transactions = pd.read_excel(os.path.join("data/", file_name))
+                transactions = transactions.dropna(subset="id")
+                fieldnames = transactions.columns.to_list()
+                list_of_transactions = []
+                for row in transactions.iterrows():
+                    dict_transaction = {}
+                    for i, element in enumerate(row[1]):
+                        dict_transaction[fieldnames[i]] = element
+                    list_of_transactions.append(dict_transaction)
+                utils_logger.info(f"Данные из файла {file_name} преобразованы в список словарей")
+                return list_of_transactions
+
             else:
-                utils_logger.error(f"Файл {file_name} не содержит список")
-                print(f"Файл {file_name} не содержит список")
+
+                utils_logger.error(f"Неверный формат файла {file_name}")
+                print(f"Неверный формат файла {file_name}")
                 return []
+
     except FileNotFoundError:
         utils_logger.error(f"Файл {file_name} не найден")
         print(f"Файл {file_name} не найден")
-        return []
-    except json.JSONDecodeError:
-        utils_logger.error(f"Файл {file_name} не содержит JSON-строки")
-        print(f"Файл {file_name} не содержит JSON-строки")
         return []
